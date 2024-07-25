@@ -1,16 +1,22 @@
-# SMD-SMOS: SuperMarioDomains and Scene-grounded Minimal dOmain Shift
+# SMD-SMOS: Grounding Stylistic Domain Generalization with Quantitative Domain Shift Measures and Synthetic Scene Images (CVPR Workshop 2024)
 
-Official implementation of [Grounding Stylistic Domain Generalization with Quantitative Domain Shift Measures and Synthetic Scene Images](https://arxiv.org/abs/2405.15961) (Best Paper at the 3rd VDU Workshop @ CVPR 2024). 
+Official implementation of [Grounding Stylistic Domain Generalization with Quantitative Domain Shift Measures and Synthetic Scene Images](https://arxiv.org/abs/2405.15961) (Best Paper at [the 3rd VDU Workshop @ CVPR 2024](https://sites.google.com/view/vdu-cvpr24/)). 
 
 ![figure1](homepage/static/images/figure1.png)
 
-## 🛠️ Downloading the Precursor Checkpoints
+## Running SMOS
+
+### Requirements
+```
+```
+
+### 🛠️ Downloading the Precursor Checkpoints
 
 PyTorch precursor checkpoints pre-trained with SMD and [DomainNet](https://ai.bu.edu/M3SDA/#dataset) are available at [Google Drive](https://drive.google.com/drive/folders/1NEaivgm9MZA9O9jTQXecrlKdUny4UzVd?usp=sharing) and [HuggingFace](https://huggingface.co/datasets/fpsluozi/SuperMarioDomains/tree/main/precursor). 
 
 By default, the precursors are placed under `precursor/`.
 
-## 🏃 Running SMOS over DG Benchmarks
+### 🏃 Running SMOS over DG Benchmarks
 
 Make sure you have the proper DG benchmark datasets placed under `datadir/`. 
 
@@ -43,9 +49,9 @@ Please find 'train_smos_PACS_pt.sh' for a sample parameter sweeping script.
 
 ## 🍄 SMD Dataset 
 
-The precursor training dataset SMD is available [here](https://huggingface.co/datasets/fpsluozi/SuperMarioDomains).
+Our synthetic precursor training dataset SMD is available [here](https://huggingface.co/datasets/fpsluozi/SuperMarioDomains).
 
-## 🧑‍🏫 Obtaining the Precursor / Teacher Model on Your Own
+### 🧑‍🏫 Obtaining the Precursor / Teacher Model on Your Own
 
 TODO
 
