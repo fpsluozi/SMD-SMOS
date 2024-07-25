@@ -1,5 +1,6 @@
 # SMD-SMOS: Grounding Stylistic Domain Generalization with Quantitative Domain Shift Measures and Synthetic Scene Images (CVPR Workshop 2024)
 
+
 [![arXiv](https://img.shields.io/badge/arXiv-2405.15961-red.svg?style=plastic)](https://arxiv.org/abs/2405.15961) 
 [![checkpoint](https://img.shields.io/badge/Download-Precursors-orange.svg?style=plastic)](https://drive.google.com/drive/folders/1NEaivgm9MZA9O9jTQXecrlKdUny4UzVd?usp=sharing) 
 [![dataset](https://img.shields.io/badge/HF--Dataset-SuperMarioDomains-yellow.svg?style=plastic)](https://huggingface.co/datasets/fpsluozi/SuperMarioDomains) 
@@ -11,6 +12,7 @@
 Official implementation of [Grounding Stylistic Domain Generalization with Quantitative Domain Shift Measures and Synthetic Scene Images](https://arxiv.org/abs/2405.15961) (Best Paper at [the 3rd VDU Workshop @ CVPR 2024](https://sites.google.com/view/vdu-cvpr24/)). 
 
 ![figure1](homepage/static/images/figure1.png)
+
 
 # 🏃 Running SMOS
 
@@ -69,12 +71,29 @@ Please find `train_smos_PACS_pt.sh` for a sample parameter sweeping script.
 
 ## 🍄 SMD Dataset 
 
-Our synthetic precursor training dataset SMD is available [here](https://huggingface.co/datasets/fpsluozi/SuperMarioDomains). Make sure it's placed under `datadir/`.
+Our synthetic precursor training dataset SMD is available [here](https://huggingface.co/datasets/fpsluozi/SuperMarioDomains). By default, the SMD domain folders are placed under `datadir/smd/`.
 
-## 🧑‍🎓 Training an SMD-infused Precursor
+## 🧑‍🎓 Training a Custom Precursor Feature Extractor
 
-TODO
+Training a precursor feature extraction ResNet50 model with all 4 domains of SMD using ERM:
 
+```
+python3 train_precursor.py "SMD_ERM_pre" --data_dir "datadir/" \
+    --work_dir "./output_precursor/" \
+    --project_name "SMD_precursor" \
+    --algorithm "ERM" \
+    --dataset "SMD" \
+    --ld_KL 0.0 \
+    --lr 1e-5 \
+    --steps 5001 --model_save 2000 \
+    --resnet_dropout 0.0 \
+    --weight_decay 0.0 \
+    --checkpoint_freq 200 \
+    --pretrained True \
+    --smos_pre_featurizer_pretrained False
+```
+
+To obtain a Precursor from scratch, simply set `--pretrained False`.
 
 # 🙏 Citation
 
