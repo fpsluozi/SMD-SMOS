@@ -1,5 +1,11 @@
 # SMD-SMOS: Grounding Stylistic Domain Generalization with Quantitative Domain Shift Measures and Synthetic Scene Images (CVPR Workshop 2024)
 
+[![arXiv](https://img.shields.io/badge/arXiv-2405.15961-red.svg?style=plastic)](https://arxiv.org/abs/2405.15961) 
+[![dataset](https://img.shields.io/badge/HF--Dataset-SuperMarioDomains-yellow.svg?style=plastic)](https://huggingface.co/datasets/fpsluozi/SuperMarioDomains) 
+[![code](https://img.shields.io/badge/Github-SMOS-green.svg?style=plastic)](https://github.com/fpsluozi/SMD-SMOS) 
+[![project](https://img.shields.io/badge/Project-Page-turquoise.svg?style=plastic)](https://arxiv.org/abs/2405.15961) 
+[![poster](https://img.shields.io/badge/Poster-3rdVDU@CVPR2024-blue.svg?style=plastic)](https://e)
+
 Official implementation of [Grounding Stylistic Domain Generalization with Quantitative Domain Shift Measures and Synthetic Scene Images](https://arxiv.org/abs/2405.15961) (Best Paper at [the 3rd VDU Workshop @ CVPR 2024](https://sites.google.com/view/vdu-cvpr24/)). 
 
 ![figure1](homepage/static/images/figure1.png)
