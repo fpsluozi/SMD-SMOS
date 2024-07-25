@@ -2,7 +2,7 @@
 
 
 [![arXiv](https://img.shields.io/badge/arXiv-2405.15961-red.svg?style=plastic)](https://arxiv.org/abs/2405.15961) 
-[![checkpoint](https://img.shields.io/badge/Download-Precursors-orange.svg?style=plastic)](https://drive.google.com/drive/folders/1NEaivgm9MZA9O9jTQXecrlKdUny4UzVd?usp=sharing) 
+[![checkpoint](https://img.shields.io/badge/Precursor-Download-FFFF00.svg?style=plastic)](https://drive.google.com/drive/folders/1NEaivgm9MZA9O9jTQXecrlKdUny4UzVd?usp=sharing) 
 [![dataset](https://img.shields.io/badge/HF--Dataset-SuperMarioDomains-yellow.svg?style=plastic)](https://huggingface.co/datasets/fpsluozi/SuperMarioDomains) 
 [![code](https://img.shields.io/badge/Github-SMD--SMOS-green.svg?style=plastic)](https://github.com/fpsluozi/SMD-SMOS) 
 [![poster](https://img.shields.io/badge/Poster-VDU@CVPR2024-blue.svg?style=plastic)](https://huggingface.co/datasets/fpsluozi/SuperMarioDomains/resolve/main/vdu_poster.pdf)
@@ -17,6 +17,7 @@ Official implementation of [Grounding Stylistic Domain Generalization with Quant
 # 🏃 Running SMOS
 
 ## 🧱 Requirements
+All reported expertiments are performed wusing one Nvidia A100 GPU with CUDA 11.7+. 
 ```
 gdown==4.7.1
 numpy==1.23.5
