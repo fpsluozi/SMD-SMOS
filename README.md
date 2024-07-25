@@ -4,19 +4,29 @@ Official implementation of [Grounding Stylistic Domain Generalization with Quant
 
 ![figure1](homepage/static/images/figure1.png)
 
-## Running SMOS
+# 🏃 Running SMOS
 
-### Requirements
+## 🧱 Requirements
 ```
+gdown==4.7.1
+numpy==1.23.5
+opencv_python==4.7.0.72
+Pillow==10.4.0
+prettytable==3.10.2
+sconf==0.2.5
+tensorboardX==2.6
+torch==2.0.1
+torchvision==0.15.2
+git+https://github.com/openai/CLIP.git
 ```
 
-### 🛠️ Downloading the Precursor Checkpoints
+## 🛠️ Downloading the Precursor Checkpoints
 
 PyTorch precursor checkpoints pre-trained with SMD and [DomainNet](https://ai.bu.edu/M3SDA/#dataset) are available at [Google Drive](https://drive.google.com/drive/folders/1NEaivgm9MZA9O9jTQXecrlKdUny4UzVd?usp=sharing) and [HuggingFace](https://huggingface.co/datasets/fpsluozi/SuperMarioDomains/tree/main/precursor). 
 
 By default, the precursors are placed under `precursor/`.
 
-### 🏃 Running SMOS over DG Benchmarks
+## ⌛ Benchmarking
 
 Make sure you have the proper DG benchmark datasets placed under `datadir/`. 
 
@@ -47,15 +57,18 @@ Alternatively, **SMOS-** is simply using an SMD-pretrained-from-scratch precurso
 
 Please find 'train_smos_PACS_pt.sh' for a sample parameter sweeping script.
 
+# 🧑‍🏫 Obtaining the Precursor / Teacher Model on Your Own
+
 ## 🍄 SMD Dataset 
 
-Our synthetic precursor training dataset SMD is available [here](https://huggingface.co/datasets/fpsluozi/SuperMarioDomains).
+Our synthetic precursor training dataset SMD is available [here](https://huggingface.co/datasets/fpsluozi/SuperMarioDomains). Make sure it's placed under `datadir/`.
 
-### 🧑‍🏫 Obtaining the Precursor / Teacher Model on Your Own
+## 🧑‍🎓 Training an SMD-infused Precursor
 
 TODO
 
-## 🙏 Citation
+
+# 🙏 Citation
 
 If you find our work useful, please refer to it with:
 ```
@@ -70,7 +83,7 @@ If you find our work useful, please refer to it with:
 ```
 
 
-## 📒 License
+# 📒 Acknowledgements
 
 This project is based off [DomainBed](https://github.com/facebookresearch/DomainBed) (MIT license) and
 [MIRO](https://github.com/khanrc/swad) (MIT license).
