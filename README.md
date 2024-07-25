@@ -17,7 +17,7 @@ Official implementation of [Grounding Stylistic Domain Generalization with Quant
 # 🏃 Running SMOS
 
 ## 🧱 Requirements
-All reported expertiments are performed wusing one Nvidia A100 GPU with CUDA 11.7+. 
+All reported expertiments are performed using one Nvidia A100 GPU with CUDA 11.7+. 
 ```
 gdown==4.7.1
 numpy==1.23.5
