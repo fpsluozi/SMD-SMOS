@@ -1,0 +1,84 @@
+[37m[36mINFO[0m[0m 07/24 16:28:02 | Command :: train_smos.py train_PACS_on_Mario_algo_SMOS_JS_ld_KL_0.15_batchsize_16_seed_3 --data_dir /scratch/yluo97/data/dg/ --work_dir ./output/ --project_name SMOS_PACS_on_Mario --algorithm SMOS_JS --dataset PACS_on_Mario --ld_KL 0.15 --lr 3e-5 --steps 5001 --model_save 5000 --resnet_dropout 0.0 --weight_decay 0.0 --trial_seed 3 --seed 3 --batch_size 16 --checkpoint_freq 200 --miro_pretrained False --pretrained True --smos_pre_featurizer_pretrained True --smos_pre_featurizer_path ./precursor/SMD_PT_4800.pth
+Environment:
+	Python: 3.9.16
+	PyTorch: 2.0.1
+	Torchvision: 0.15.2
+	CUDA: 11.7
+	CUDNN: 8500
+	NumPy: 1.23.5
+	PIL: 9.4.0
+Args:
+	algorithm: SMOS_JS
+	aug_type: None
+	checkpoint_freq: 200
+	configs: []
+	data_dir: /scratch/yluo97/data/dg
+	dataset: PACS_on_Mario
+	debug: False
+	deterministic: True
+	downsample_size: None
+	evalmode: fast
+	holdout_fraction: 0.2
+	model_save: 5000
+	name: train_PACS_on_Mario_algo_SMOS_JS_ld_KL_0.15_batchsize_16_seed_3
+	out_dir: output/train_output/PACS_on_Mario/SMOS_JS/240724_16-28-01_train_PACS_on_Mario_algo_SMOS_JS_ld_KL_0.15_batchsize_16_seed_3
+	out_root: output/train_output/PACS_on_Mario
+	prebuild_loader: False
+	project_name: SMOS_PACS_on_Mario
+	seed: 3
+	show: False
+	steps: 5001
+	tb_freq: 10
+	test_envs: None
+	trial_seed: 3
+	unique_name: 240724_16-28-01_train_PACS_on_Mario_algo_SMOS_JS_ld_KL_0.15_batchsize_16_seed_3
+	work_dir: output
+HParams:
+	data_augmentation: True
+	val_augment: False
+	resnet18: False
+	[36mresnet_dropout: 0.0
+	[0mclass_balanced: False
+	optimizer: adam
+	freeze_bn: True
+	[36mpretrained: True
+	[0m[36mlr: 3e-05
+	[0m[36mbatch_size: 16
+	[0m[36mweight_decay: 0.0
+	[0mswad: True
+	swad_kwargs: 
+	  n_converge: 3
+	  n_tolerance: 6
+	  tolerance_ratio: 0.3
+	test_batchsize: 16
+	model: resnet50
+	feat_layers: stem_block
+	ld: 0.0
+	[36mld_KL: 0.15
+	[0mlr_mult: 10.0
+	[36mmiro_pretrained: False
+	[0mmiro_pretrained_path: ./
+	dg_pretrained: False
+	dg_pretrained_path: ./
+	[36msmos_pre_featurizer_pretrained: True
+	[0m[36msmos_pre_featurizer_path: ./precursor/SMD_PT_4800.pth[0m
+Dataset:
+	[PACS_on_Mario] #envs=4, #classes=7
+	env0: cartoon (#2344)
+	env1: painting (#2048)
+	env2: photo (#1670)
+	env3: sketch (#3929)
+
+[37m[36mINFO[0m[0m 07/24 16:28:02 | n_steps = 5001
+[37m[36mINFO[0m[0m 07/24 16:28:02 | checkpoint_freq = 200
+[37m[36mINFO[0m[0m 07/24 16:28:02 | n_steps is updated to 5001 => 5001 for checkpointing
+[37m[36mINFO[0m[0m 07/24 16:28:02 | Target test envs = [[0], [1], [2], [3]]
+[37m[36mINFO[0m[0m 07/24 16:28:02 | 
+[37m[36mINFO[0m[0m 07/24 16:28:02 | Testenv name escaping te_cartoon -> te_cartoon
+[37m[36mINFO[0m[0m 07/24 16:28:02 | Test envs = [0], name = te_cartoon
+[37m[36mINFO[0m[0m 07/24 16:28:02 | Batch sizes for each domain: [0, 16, 16, 16] (total=48)
+[37m[36mINFO[0m[0m 07/24 16:28:02 | steps-per-epoch for each domain: 102.44, 83.50, 196.50 -> min = 83.50
+[37m[36mINFO[0m[0m 07/24 16:28:06 | # of params = 47034311
+[37m[36mINFO[0m[0m 07/24 16:28:13 | test_in     test_out    train_in    train_out   tr_outloss  env0_in     env0_out    env1_out    env2_out    env3_out    step        epoch       loss        reg_loss    feat_loss   step_time   eval_time  
+[37m[36mINFO[0m[0m 07/24 16:28:13 | 0.132729    0.141026    0.000000    0.179804    1.973149    0.132729    0.141026    0.154034    0.209581    0.175796    0           0.000000    1.891585    -2.281419   -0.890800   0.495805    7.098836   
+[37m[36mINFO[0m[0m 07/24 16:28:39 | 0.138593    0.136752    0.000000    0.139035    3737513200  0.138593    0.136752    0.090465    0.131737    0.194904    200         2.395210    -341358262  2630350938  -227572165  0.088423    5.600111   

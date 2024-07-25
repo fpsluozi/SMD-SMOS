@@ -1,0 +1,89 @@
+[37m[36mINFO[0m[0m 07/24 16:32:29 | Command :: train_smos.py train_PACS_on_Mario_algo_SMOS_JS_ld_KL_0.15_batchsize_16_seed_3 --data_dir /scratch/yluo97/data/dg/ --work_dir ./output/ --project_name SMOS_PACS_on_Mario --algorithm SMOS_JS --dataset PACS_on_Mario --ld_KL 0.15 --lr 3e-5 --steps 5001 --model_save 5000 --resnet_dropout 0.0 --weight_decay 0.0 --trial_seed 3 --seed 3 --batch_size 16 --checkpoint_freq 200 --miro_pretrained False --pretrained True --smos_pre_featurizer_pretrained True --smos_pre_featurizer_path ./precursor/SMD_PT_4800.pth
+Environment:
+	Python: 3.9.16
+	PyTorch: 2.0.1
+	Torchvision: 0.15.2
+	CUDA: 11.7
+	CUDNN: 8500
+	NumPy: 1.23.5
+	PIL: 9.4.0
+Args:
+	algorithm: SMOS_JS
+	aug_type: None
+	checkpoint_freq: 200
+	configs: []
+	data_dir: /scratch/yluo97/data/dg
+	dataset: PACS_on_Mario
+	debug: False
+	deterministic: True
+	downsample_size: None
+	evalmode: fast
+	holdout_fraction: 0.2
+	model_save: 5000
+	name: train_PACS_on_Mario_algo_SMOS_JS_ld_KL_0.15_batchsize_16_seed_3
+	out_dir: output/train_output/PACS_on_Mario/SMOS_JS/240724_16-32-29_train_PACS_on_Mario_algo_SMOS_JS_ld_KL_0.15_batchsize_16_seed_3
+	out_root: output/train_output/PACS_on_Mario
+	prebuild_loader: False
+	project_name: SMOS_PACS_on_Mario
+	seed: 3
+	show: False
+	steps: 5001
+	tb_freq: 10
+	test_envs: None
+	trial_seed: 3
+	unique_name: 240724_16-32-29_train_PACS_on_Mario_algo_SMOS_JS_ld_KL_0.15_batchsize_16_seed_3
+	work_dir: output
+HParams:
+	data_augmentation: True
+	val_augment: False
+	resnet18: False
+	[36mresnet_dropout: 0.0
+	[0mclass_balanced: False
+	optimizer: adam
+	freeze_bn: True
+	[36mpretrained: True
+	[0m[36mlr: 3e-05
+	[0m[36mbatch_size: 16
+	[0m[36mweight_decay: 0.0
+	[0mswad: True
+	swad_kwargs: 
+	  n_converge: 3
+	  n_tolerance: 6
+	  tolerance_ratio: 0.3
+	test_batchsize: 16
+	model: resnet50
+	feat_layers: stem_block
+	ld: 0.15
+	[36mld_KL: 0.15
+	[0mlr_mult: 10.0
+	[36mmiro_pretrained: False
+	[0mmiro_pretrained_path: ./
+	dg_pretrained: False
+	dg_pretrained_path: ./
+	[36msmos_pre_featurizer_pretrained: True
+	[0m[36msmos_pre_featurizer_path: ./precursor/SMD_PT_4800.pth[0m
+Dataset:
+	[PACS_on_Mario] #envs=4, #classes=7
+	env0: cartoon (#2344)
+	env1: painting (#2048)
+	env2: photo (#1670)
+	env3: sketch (#3929)
+
+[37m[36mINFO[0m[0m 07/24 16:32:29 | n_steps = 5001
+[37m[36mINFO[0m[0m 07/24 16:32:29 | checkpoint_freq = 200
+[37m[36mINFO[0m[0m 07/24 16:32:29 | n_steps is updated to 5001 => 5001 for checkpointing
+[37m[36mINFO[0m[0m 07/24 16:32:29 | Target test envs = [[0], [1], [2], [3]]
+[37m[36mINFO[0m[0m 07/24 16:32:29 | 
+[37m[36mINFO[0m[0m 07/24 16:32:29 | Testenv name escaping te_cartoon -> te_cartoon
+[37m[36mINFO[0m[0m 07/24 16:32:29 | Test envs = [0], name = te_cartoon
+[37m[36mINFO[0m[0m 07/24 16:32:29 | Batch sizes for each domain: [0, 16, 16, 16] (total=48)
+[37m[36mINFO[0m[0m 07/24 16:32:29 | steps-per-epoch for each domain: 102.44, 83.50, 196.50 -> min = 83.50
+[37m[36mINFO[0m[0m 07/24 16:32:33 | # of params = 47034311
+[37m[36mINFO[0m[0m 07/24 16:32:39 | test_in     test_out    train_in    train_out   tr_outloss  env0_in     env0_out    env1_out    env2_out    env3_out    step        epoch       loss        feat_loss   step_time   eval_time  
+[37m[36mINFO[0m[0m 07/24 16:32:39 | 0.139126    0.138889    0.000000    0.160023    1.972298    0.139126    0.138889    0.156479    0.179641    0.143949    0           0.000000    1.616182    -0.445400   0.488956    5.761228   
+[37m[36mINFO[0m[0m 07/24 16:33:05 | 0.682836    0.698718    0.000000    0.938783    0.210213    0.682836    0.698718    0.941320    0.982036    0.892994    200         2.395210    -0.072593   -0.386863   0.088486    5.419505   
+[37m[36mINFO[0m[0m 07/24 16:33:31 | 0.694563    0.707265    0.000000    0.954355    0.152320    0.694563    0.707265    0.943765    0.997006    0.922293    400         4.790419    -0.554104   -0.380748   0.089366    5.594914   
+[37m[36mINFO[0m[0m 07/24 16:33:57 | 0.778252    0.814103    0.000000    0.945118    0.160490    0.778252    0.814103    0.943765    0.982036    0.909554    600         7.185629    -0.661553   -0.382462   0.088467    5.576452   
+[37m[36mINFO[0m[0m 07/24 16:34:25 | 0.724947    0.767094    0.000000    0.960153    0.125229    0.724947    0.767094    0.963325    0.991018    0.926115    800         9.580838    -0.709483   -0.381623   0.088271    8.170292   
+[37m[36mINFO[0m[0m 07/24 16:34:51 | 0.780917    0.807692    0.000000    0.954253    0.143318    0.780917    0.807692    0.938875    0.985030    0.938854    1000        11.976048   -0.766748   -0.383651   0.088066    5.644723   
+[37m[36mINFO[0m[0m 07/24 16:35:17 | 0.763326    0.803419    0.000000    0.957054    0.132730    0.763326    0.803419    0.951100    0.985030    0.935032    1200        14.371257   -0.797835   -0.383277   0.087881    5.597200   

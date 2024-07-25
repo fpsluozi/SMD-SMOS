@@ -3,8 +3,9 @@
 [![arXiv](https://img.shields.io/badge/arXiv-2405.15961-red.svg?style=plastic)](https://arxiv.org/abs/2405.15961) 
 [![dataset](https://img.shields.io/badge/HF--Dataset-SuperMarioDomains-yellow.svg?style=plastic)](https://huggingface.co/datasets/fpsluozi/SuperMarioDomains) 
 [![code](https://img.shields.io/badge/Github-SMOS-green.svg?style=plastic)](https://github.com/fpsluozi/SMD-SMOS) 
-[![project](https://img.shields.io/badge/Project-Page-turquoise.svg?style=plastic)](https://arxiv.org/abs/2405.15961) 
-[![poster](https://img.shields.io/badge/Poster-3rdVDU@CVPR2024-blue.svg?style=plastic)](https://e)
+[![poster](https://img.shields.io/badge/Poster-3rdVDU@CVPR2024-blue.svg?style=plastic)](https://huggingface.co/datasets/fpsluozi/SuperMarioDomains/resolve/main/vdu_poster.pdf)
+[![Talk](https://img.shields.io/badge/Talk-Slides-violet.svg?style=plastic)](https://huggingface.co/datasets/fpsluozi/SuperMarioDomains/resolve/main/vdu_talk.pptx)
+<!-- [![project](https://img.shields.io/badge/Project-Page-turquoise.svg?style=plastic)](https://arxiv.org/abs/2405.15961)  -->
 
 Official implementation of [Grounding Stylistic Domain Generalization with Quantitative Domain Shift Measures and Synthetic Scene Images](https://arxiv.org/abs/2405.15961) (Best Paper at [the 3rd VDU Workshop @ CVPR 2024](https://sites.google.com/view/vdu-cvpr24/)). 
 
@@ -61,7 +62,7 @@ Alternatively, **SMOS-** is simply using an SMD-pretrained-from-scratch precurso
     --smos_pre_featurizer_path "./precursor/SMD_Scratch_4800.pth"
 ```
 
-Please find 'train_smos_PACS_pt.sh' for a sample parameter sweeping script.
+Please find `train_smos_PACS_pt.sh` for a sample parameter sweeping script.
 
 # 🧑‍🏫 Obtaining the Precursor / Teacher Model on Your Own
 

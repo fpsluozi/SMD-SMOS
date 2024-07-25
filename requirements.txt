@@ -1,0 +1,10 @@
+clip==1.0
+gdown==4.7.1
+numpy==1.23.5
+opencv_python==4.7.0.72
+Pillow==10.4.0
+prettytable==3.10.2
+sconf==0.2.5
+tensorboardX==2.6
+torch==2.0.1
+torchvision==0.15.2

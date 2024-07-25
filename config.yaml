@@ -1,0 +1,27 @@
+# Default update config
+# Config order: hparams_registry -> config.yaml -> CLI
+swad_kwargs:
+  n_converge: 3
+  n_tolerance: 6
+  tolerance_ratio: 0.3
+
+# resnet50, clip_resnet50, clip_vit-b16, swag_regnety_16gf
+model: resnet50
+feat_layers: stem_block
+
+# Reg params
+ld: 0.15
+ld_KL: 0.15
+lr_mult: 10.
+
+trial_seed: 3
+seed: 3
+batch_size: 16
+test_batchsize: 16
+
+# Pretrain mix params
+miro_pretrained: False
+miro_pretrained_path: ./
+
+smos_pre_featurizer_pretrained: False
+smos_pre_featurizer_path: ./
